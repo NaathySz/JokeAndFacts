@@ -9,6 +9,12 @@
 
 ConVar jf_enablejokes;
 ConVar jf_enablefacts;
+ConVar jf_automatic_facts;
+ConVar jf_automatic_jokes;
+ConVar jf_jokes_timer;
+ConVar jf_facts_timer;
+Handle autojokes;
+Handle autofacts;
 
 public Plugin myinfo = 
 {
@@ -27,7 +33,17 @@ public void OnPluginStart()
     RegConsoleCmd("sm_facts", Command_facts);
     jf_enablejokes = CreateConVar("sm_enable_jokes", "1");
     jf_enablefacts = CreateConVar("sm_enable_facts", "1");
+    jf_automatic_facts = CreateConVar("sm_automatic_facts", "1");
+    jf_automatic_jokes = CreateConVar("sm_automatic_jokes", "1");
+    jf_jokes_timer = CreateConVar("sm_jokestimer", "30");
+    jf_facts_timer = CreateConVar("sm_factstimer", "30");
     AutoExecConfig(true, "JokeAndFacts");
+}
+
+public void OnConfigsExecuted()
+{
+    RestartFactsTimer();
+    RestartJokesTimer();
 }
 
 void OnFactsReceived(HTTPResponse response, any value)
@@ -75,4 +91,34 @@ public Action Command_facts(int client, int args)
     HTTPRequest factreq = new HTTPRequest("https://api.popcat.xyz/fact");
     factreq.Get(OnFactsReceived);
     }
+}
+
+public Action factstimer(Handle timer)
+{
+	if(GetConVarInt(jf_automatic_facts) == 1)
+	{
+	    HTTPRequest factreq = new HTTPRequest("https://api.popcat.xyz/fact");
+	    factreq.Get(OnFactsReceived);
+	}
+}
+
+public Action jokestimer(Handle timer)
+{
+	if(GetConVarInt(jf_automatic_jokes) == 1)
+    {
+	    HTTPRequest jokereq = new HTTPRequest("https://api.popcat.xyz/joke");
+	    jokereq.Get(OnJokesReceived);
+    }
+}
+
+void RestartFactsTimer()
+{
+    delete autofacts;
+    autofacts = CreateTimer(float(jf_facts_timer.IntValue), factstimer, _, TIMER_REPEAT);
+}
+
+void RestartJokesTimer()
+{
+    delete autojokes;
+    autojokes = CreateTimer(float(jf_jokes_timer.IntValue), jokestimer, _, TIMER_REPEAT);
 }
