@@ -1,7 +1,7 @@
 # JokeAndFacts
 ### Description
-Simple plugin for fun. It tell players some random fact or joke
-And only this, nothing more. Btw i can add more stuffs later ^^
+Simple plugin for fun. It tell players some random facts and jokes  
+Thats only it. Hope you have fun! 😊
 ***
 ### ConVars/Info
 * **sm_enable_jokes 1/0** - Enable/Disable !joke command (0 = Disable, 1 = Enable)
