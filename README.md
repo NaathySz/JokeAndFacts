@@ -6,6 +6,10 @@ And only this, nothing more. Btw i can add more stuffs later ^^
 ### ConVars/Info
 * **sm_enable_jokes 1/0** - Enable/Disable !joke command (0 = Disable, 1 = Enable)
 * **sm_enable_facts 1/0** - Enable/Disable !fact (0 = Disable, 1 = Enable)  
+* **sm_automatic_jokes 1/0** - Enable/Disable automatically show jokes on chat (0 = Disable, 1 = Enable)
+* **sm_automatic_facts 1/0** - Enable/Disable automatically show facts on chat (0 = Disable, 1 = Enable)
+* **sm_jokestimer** - Set timer in seconds to show jokes on chat (Default: 30)
+* **sm_factstimer** - Set timer in seconds to show facts on chat (Default : 30)
 
 The plugin will generate a cfg file with the cvars.
 ***
