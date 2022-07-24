@@ -20,7 +20,9 @@ The plugin will generate a cfg file with the cvars.
 * !fact
 * !joke
 * !quote
-
+***
+### Dependencies
+* **[REST in Pawn](https://github.com/ErikMinekus/sm-ripext/releases/tag/1.3.1)**
 ***
 **Feel free to request anything**
 
