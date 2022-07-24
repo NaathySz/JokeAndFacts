@@ -10,8 +10,8 @@ Thats only it. Hope you have fun! 😊
 * **sm_automatic_jokes 1/0** - Enable/Disable automatically show jokes in chat (0 = Disable, 1 = Enable)
 * **sm_automatic_facts 1/0** - Enable/Disable automatically show facts in chat (0 = Disable, 1 = Enable)
 * **sm_automatic_quotes 1/0** - Enable/Disable automatically show quotes in chat (0 = Disable, 1 = Enable)
-* **sm_jokestimer** - Set timer in seconds to show jokes on chat (Default: 1380)
-* **sm_factstimer** - Set timer in seconds to show facts on chat (Default: 1080)
+* **sm_jokestimer** - Set timer in seconds to show jokes in chat (Default: 1380)
+* **sm_factstimer** - Set timer in seconds to show facts in chat (Default: 1080)
 * **sm_quotestimer** - Set timer in seconds to show quotes in chat (Default: 780)
 
 The plugin will generate a cfg file with the cvars.
