@@ -1,6 +1,6 @@
 # Jokes&Facts
 ### Description
-Simple plugin for fun. It tell players some random facts and jokes  
+Simple plugin for fun. It tell players some random facts, jokes and quotes  
 Thats only it. Hope you have fun! 😊
 ***
 ### ConVars/Info
