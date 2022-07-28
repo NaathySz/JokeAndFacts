@@ -26,5 +26,4 @@ The plugin will generate a cfg file with the cvars.
 ***
 **Feel free to request anything**
 
-My Discord: Nathy#0666  
-My Steam: https://steamcommunity.com/id/nathyzinhaa  
+[Discord](https://discord.com/users/476946479110684683) | [Steam](https://steamcommunity.com/id/nathyzinhaa)
